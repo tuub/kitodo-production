@@ -1,0 +1,102 @@
+<collection>
+    <record>
+        <leader>00955nam#a2200313#i#4500</leader>
+        <controlfield tag="001">990009699790302884</controlfield>
+        <controlfield tag="005">19930722</controlfield>
+        <controlfield tag="007">tu</controlfield>
+        <controlfield tag="008">900725|1968####xx######r#####|||#|#ger#u</controlfield>
+        <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">631193463</subfield>
+            <subfield code="2">OCoLC</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">BV003105189</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(DE-599)BVBBV003105189</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(DE-604)BV003105189</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="c">DE-604</subfield>
+            <subfield code="e">rakddb</subfield>
+            <subfield code="a">739-----</subfield>
+            <subfield code="d">739-----</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="041">
+            <subfield code="a">ger</subfield>
+            <subfield code="2">ISO 639-2</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">KK 3634</subfield>
+            <subfield code="2">rvk</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">KK 3633</subfield>
+            <subfield code="2">rvk</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="100">
+            <subfield code="a">Bulgakov, Michail</subfield>
+            <subfield code="d">1891-1940</subfield>
+            <subfield code="0">(DE-588)118517376</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="0" tag="240">
+            <subfield code="p">Bulgakov, Michail</subfield>
+            <subfield code="d">1891-1940</subfield>
+            <subfield code="a">Master i Margarita</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="0" tag="245">
+            <subfield code="a">&lt;&lt;Der&gt;&gt; Meister und Margarita :</subfield>
+            <subfield code="b">Roman /</subfield>
+            <subfield code="c">Michail Bulgakow. [Aus d. Russ. von Thomas Reschke].</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="1" tag="264">
+            <subfield code="a">Berlin :</subfield>
+            <subfield code="b">Dt. Buchgemeinschaft,</subfield>
+            <subfield code="c">1968.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">480 S.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="b">txt</subfield>
+            <subfield code="2">rdacontent</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="b">n</subfield>
+            <subfield code="2">rdamedia</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="b">nc</subfield>
+            <subfield code="2">rdacarrier</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="500">
+            <subfield code="a">EST: Master i Margarita &lt;dt.&gt;</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Reschke, Thomas</subfield>
+            <subfield code="0">(DE-588)106594044</subfield>
+        </datafield>
+        <datafield ind1="q" ind2=" " tag="940">
+            <subfield code="a">TUB-nvmb</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="942">
+            <subfield code="a">5</subfield>
+        </datafield>
+        <datafield ind1="c" ind2=" " tag="980">
+            <subfield code="a">HB</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="985">
+            <subfield code="a">Mehrere Einträge im E-Zettelkatalog</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="986">
+            <subfield code="u">http://ipac.ub.tu-berlin.de/cgi-bin/katalog-link?t2280728</subfield>
+            <subfield code="3">Digitalisierte Katalogkarte</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="986">
+            <subfield code="u">http://ipac.ub.tu-berlin.de/cgi-bin/katalog-link?t2280729</subfield>
+            <subfield code="3">Digitalisierte Katalogkarte</subfield>
+        </datafield>
+    </record>
+</collection>

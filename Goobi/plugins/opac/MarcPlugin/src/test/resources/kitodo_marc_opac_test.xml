@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opacCatalogues>
+    <doctypes>
+        <type isMultiVolume="false" isPeriodical="false" rulesetType="Monograph" title="monograph" physDocStructType="BoundBook">
+            <marcLeader>am</marcLeader>
+            <notContainingField>773w</notContainingField>
+        </type>
+        <type isMultiVolume="true" isPeriodical="false" rulesetType="MultiVolumeWork" childRulesetType="Volume" title="multivolume"
+              physDocStructType="BoundBook">
+            <marcLeader>a[am]</marcLeader>
+            <parentField>773w</parentField>
+            <parentFieldFilter>\(DE-.+\)</parentFieldFilter>
+        </type>
+        <type isMultiVolume="false" isPeriodical="true" rulesetType="Periodical" childRulesetType="PeriodicalVolume" title="periodical"
+              physDocStructType="BoundBook">
+            <marcLeader>as</marcLeader>
+        </type>
+    </doctypes>
+
+    <catalogues>
+        <catalogue title="Some Alma API">
+            <test>value</test>
+            <config url="https://api-eu.hosted.exlibrisgroup.com/almaws/v1/bibs/"
+                    apikey="secret"
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.AlmaMarcCatalogueClient"
+                    recordTag="record"/>
+            <searchFields>
+                <searchField label="Identifier" value="mms_id"/>
+                <searchField label="foo" value="bar"/>
+            </searchFields>
+            <parentDataCatalogue>B3Kat OAI-PMH</parentDataCatalogue>
+        </catalogue>
+        <catalogue title="B3Kat OAI-PMH">
+            <config url="http://bvbr.bib-bvb.de:8991/aleph-cgi/oai/oai_opendata.pl"
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.OaiMarcCatalogueClient"/>
+            <searchFields>
+                <searchField label="Identifier" value="identifier"/>
+            </searchFields>
+        </catalogue>
+    </catalogues>
+
+    <authorities>
+        <authority id="gnd">
+            <uri>http://d-nb.info/gnd/</uri>
+            <prefix>(DE-588)</prefix>
+            <valueSubfield>0</valueSubfield>
+            <idSubfield>2</idSubfield>
+        </authority>
+        <authority id="rvk">
+            <idSubfield>2</idSubfield>
+        </authority>
+    </authorities>
+
+    <mapping>
+        <metadata>
+            <field>CatalogIDDigital</field>
+            <marcfield>001</marcfield>
+        </metadata>
+        <metadata>
+            <field>CatalogIDMainSeries</field>
+            <marcfield>810w</marcfield>
+        </metadata>
+        <metadata>
+            <field>DocLanguage</field>
+            <marcfield>041a</marcfield>
+        </metadata>
+        <metadata>
+            <field>SizeSourcePrint</field>
+            <marcfield>300a</marcfield>
+        </metadata>
+        <metadata>
+            <field>PlaceOfPublication</field>
+            <marcfield>264a</marcfield>
+            <altMarcfield>260a</altMarcfield>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>PublisherName</field>
+            <marcfield>264b</marcfield>
+            <altMarcfield>260b</altMarcfield>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>PublicationYear</field>
+            <marcfield>264c</marcfield>
+            <altMarcfield>260c</altMarcfield>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>SeriesOrder</field>
+            <marcfield>810v</marcfield>
+            <altMarcfield>490v</altMarcfield>
+        </metadata>
+        <metadata>
+            <field>TitleDocMainSeries</field>
+            <marcfield>810a</marcfield>
+            <altMarcfield>490a</altMarcfield>
+        </metadata>
+        <metadata>
+            <field>TitleDocMain</field>
+            <marcfield>245a</marcfield>
+            <replace>
+                <pattern>&lt;&lt;(.*)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;(.*)&#156;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata docStructType="Volume">
+            <field>TitleDocMain</field>
+            <marcfield>245p</marcfield>
+            <replace>
+                <pattern>&lt;&lt;(.*)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;(.*)&#156;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>TitleDocSub1</field>
+            <marcfield>245b</marcfield>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>TitleDocMainShort</field>
+            <marcfield>245a</marcfield>
+            <replace>
+                <pattern>&lt;&lt;.*&gt;&gt;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;.*&#156;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>Author</field>
+            <marcfield>100a</marcfield>
+            <altMarcfield>700a</altMarcfield>
+            <matching>.+\,.+</matching>
+            <authority>gnd</authority>
+        </metadata>
+        <metadata>
+            <field>shelfmarksource</field>
+            <marcfield>852h</marcfield>
+            <altMarcfield>AVAd</altMarcfield>
+            <addToPhysDocStruct>true</addToPhysDocStruct>
+        </metadata>
+        <metadata>
+            <field>Keyword</field>
+            <marcfield>600a</marcfield>
+            <marcfield>610a</marcfield>
+            <marcfield>611a</marcfield>
+            <marcfield>630a</marcfield>
+            <marcfield>648a</marcfield>
+            <marcfield>650a</marcfield>
+            <marcfield>651a</marcfield>
+            <authority exclusive="true">gnd</authority>
+            <replace>
+                <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>Classification</field>
+            <marcfield>084a</marcfield>
+            <authority exclusive="true">rvk</authority>
+        </metadata>
+    </mapping>
+</opacCatalogues>

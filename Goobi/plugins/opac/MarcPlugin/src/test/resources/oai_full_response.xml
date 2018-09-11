@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2018-09-03T08:02:39Z</responseDate>
+    <request verb="GetRecord" identifier="BV024449795" metadataPrefix="marc21">http://bvbr.bib-bvb.de:8991/aleph-cgi/oai/oai_opendata.pl</request>
+    <GetRecord>
+        <record>
+            <header>
+                <identifier>oai:aleph.bib-bvb.de:BVB01-018426452</identifier>
+                <datestamp>2016-03-27T13:14:32Z</datestamp>
+                <setSpec>OpenData</setSpec>
+            </header>
+            <metadata>
+                <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim">
+                    <marc:leader>00000nam a2200000 c 4500</marc:leader>
+                    <marc:controlfield tag="001">BV024449795</marc:controlfield>
+                    <marc:controlfield tag="003">DE-604</marc:controlfield>
+                    <marc:controlfield tag="005">20090910</marc:controlfield>
+                    <marc:controlfield tag="007">t</marc:controlfield>
+                    <marc:controlfield tag="008">||||||s1973             |||| 00||| und d</marc:controlfield>
+                    <marc:datafield tag="020" ind1=" " ind2=" ">
+                        <marc:subfield code="a">0340109602</marc:subfield>
+                        <marc:subfield code="9">0-340-10960-2</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="035" ind1=" " ind2=" ">
+                        <marc:subfield code="a">(OCoLC)251961516</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="035" ind1=" " ind2=" ">
+                        <marc:subfield code="a">(DE-599)BVBBV024449795</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="040" ind1=" " ind2=" ">
+                        <marc:subfield code="a">DE-604</marc:subfield>
+                        <marc:subfield code="b">ger</marc:subfield>
+                        <marc:subfield code="e">rakwb</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="049" ind1=" " ind2=" ">
+                        <marc:subfield code="a">DE-83</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="100" ind1="1" ind2=" ">
+                        <marc:subfield code="a">Clark, Ronald W.</marc:subfield>
+                        <marc:subfield code="d">1916-1987</marc:subfield>
+                        <marc:subfield code="e">Verfasser</marc:subfield>
+                        <marc:subfield code="0">(DE-588)131266195</marc:subfield>
+                        <marc:subfield code="4">aut</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="245" ind1="1" ind2="0">
+                        <marc:subfield code="a">Einstein</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="260" ind1=" " ind2=" ">
+                        <marc:subfield code="a">London</marc:subfield>
+                        <marc:subfield code="b">Hodder and Stoughton</marc:subfield>
+                        <marc:subfield code="c">1973</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="300" ind1=" " ind2=" ">
+                        <marc:subfield code="a">670 S.</marc:subfield>
+                    </marc:datafield>
+                    <marc:datafield tag="940" ind1="1" ind2=" ">
+                        <marc:subfield code="q">TUB-nvm</marc:subfield>
+                    </marc:datafield>
+                </marc:record>
+            </metadata>
+        </record>
+    </GetRecord>
+</OAI-PMH>

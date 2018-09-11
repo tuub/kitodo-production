@@ -1,0 +1,64 @@
+<collection>
+    <record>
+        <leader>00000nam a2200000 cc4500</leader>
+        <controlfield tag="001">BV006101925</controlfield>
+        <controlfield tag="003">DE-604</controlfield>
+        <controlfield tag="005">20150122</controlfield>
+        <controlfield tag="007">t</controlfield>
+        <controlfield tag="008">921030s1914 gw |||| 00||| ger d</controlfield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(OCoLC)496181862</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(DE-599)BVBBV006101925</subfield>
+        </datafield>
+        <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">DE-604</subfield>
+            <subfield code="b">ger</subfield>
+            <subfield code="e">rakddb</subfield>
+        </datafield>
+        <datafield tag="041" ind1="0" ind2=" ">
+            <subfield code="a">ger</subfield>
+        </datafield>
+        <datafield tag="084" ind1=" " ind2=" ">
+            <subfield code="a">5,1</subfield>
+            <subfield code="2">ssgn</subfield>
+        </datafield>
+        <datafield tag="100" ind1="1" ind2=" ">
+            <subfield code="a">Kant, Immanuel</subfield>
+            <subfield code="d">1724-1804</subfield>
+            <subfield code="e">Verfasser</subfield>
+            <subfield code="0">(DE-588)118559796</subfield>
+            <subfield code="4">aut</subfield>
+            <subfield code="9">ddb_valid</subfield>
+        </datafield>
+        <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Immanuel Kants Werke</subfield>
+            <subfield code="n">5</subfield>
+            <subfield code="p">Kritik der praktischen Vernunft</subfield>
+            <subfield code="c">in Gemeinschaft mit Hermann Cohen, Artur Buchenau, Otto Buek, Albert Görland, B. Kellermann hrsg. von Ernst
+                Cassirer
+            </subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Berlin</subfield>
+            <subfield code="b">Cassirer</subfield>
+            <subfield code="c">1914</subfield>
+        </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+            <subfield code="a">643 S.</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2="2">
+            <subfield code="a">Kant, Immanuel</subfield>
+            <subfield code="d">1724-1804</subfield>
+            <subfield code="0">(DE-588)118559796</subfield>
+            <subfield code="4">aut</subfield>
+            <subfield code="t">Kritik der Urteilskraft</subfield>
+            <subfield code="9">ddb_valid</subfield>
+        </datafield>
+        <datafield tag="773" ind1="0" ind2="8">
+            <subfield code="w">(DE-604)BV006101921</subfield>
+            <subfield code="g">5</subfield>
+        </datafield>
+    </record>
+</collection>

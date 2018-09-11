@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opacCatalogues>
+    <!--
+     ! Catalogue client section
+     !
+     ! Required for a catalogue client is title, url and class. For Alma API an apikey must be defined.
+     ! recordTag may be used in oai context to differentiate between oai and marc record.
+    -->
+    <catalogues>
+        <catalogue title="B3Kat SRU">
+            <config url="http://bvbr.bib-bvb.de:5661/bvb01sru?version=1.1\&amp;recordSchema=marcxml\&amp;operation=searchRetrieve\&amp;query={query}\&amp;maximumRecords={maxRecords}"
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.SruMarcCatalogueClient"
+                    maxRecords="15"/>
+            <searchFields>
+                <searchField label="Identifier" value="marcxml.idn"/>
+                <searchField label="Title" value="marcxml.title"/>
+                <searchField label="Author" value="marcxml.creator"/>
+                <searchField label="Subject" value="marcxml.subject"/>
+            </searchFields>
+        </catalogue>
+        <catalogue title="B3Kat OAI-PMH">
+            <config url="http://bvbr.bib-bvb.de:8991/aleph-cgi/oai/oai_opendata.pl"
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.OaiMarcCatalogueClient"
+                    recordTag="marc:record"/>
+            <searchFields>
+                <searchField label="Identifier" value="identifier"/>
+            </searchFields>
+        </catalogue>
+        <!--
+        <catalogue title="Some ALMA API">
+            <config url="https://api-eu.hosted.exlibrisgroup.com/almaws/v1/bibs/{mms_id}?expand=p_avail"
+                    apikey="secret"
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.AlmaMarcCatalogueClient"
+                    recordTag="record"/>
+            <searchFields>
+                <searchField label="Identifier" value="mms_id"/>
+            </searchFields>
+            <parentDataCatalogue>B3Kat SRU</parentDataCatalogue>  Used if the parent data needs to be queried in a certain client,
+                                                                            which is actually the case in Berlin 2018.
+        </catalogue>
+        -->
+    </catalogues>
+
+    <!--
+     ! Document type section
+     !
+     ! Marc, marc, marc... There is no straightforward way to figure out a publication type in marc.
+     ! The characters 6 and 7 in the leader field narrows it, but it is not enough. We have to provide possibilities to
+     ! check the existence of other fields as well. E.g. if 'am' shows up in char 6-7 in the leader field, it is a monograph
+     ! if it does NOT have a reference to a parent record in 773w. Otherwise, it is a part of a multi volume work.
+     ! (One may also check the 19th character in the leader field, but this is not reliable.)
+     !
+    -->
+    <doctypes>
+        <type isMultiVolume="false" isPeriodical="false" rulesetType="Monograph" title="monograph" physDocStructType="BoundBook">
+            <marcLeader>am</marcLeader>
+            <notContainingField>773w</notContainingField>
+        </type>
+        <type isMultiVolume="true" isPeriodical="false" rulesetType="MultiVolumeWork" childRulesetType="Volume" title="multivolume"
+              physDocStructType="BoundBook">
+            <marcLeader>a[am]</marcLeader> <!-- Parts of multivolume works may have am or aa in leader(6-7) -->
+            <parentField>773w</parentField>
+            <parentFieldFilter>\(DE-.+\)</parentFieldFilter>
+        </type>
+        <type isMultiVolume="false" isPeriodical="true" rulesetType="Periodical" childRulesetType="PeriodicalVolume" title="periodical"
+              physDocStructType="BoundBook">
+            <marcLeader>as</marcLeader>
+        </type>
+    </doctypes>
+
+    <!-- Authorities section
+     ! Authorities can be used for two purposes. (1) for extending metadata values with authority codes such as GND number,
+     ! (2) selecting only values having a  authority.
+     !
+     ! Explanation of the fields:
+     ! <authority id=" id name of the authority ">
+     !   <uri> uri of authority, if any </uri>
+     !  <prefix> if prefix is configured, only values having this prefix will be considered, and the prefix itself will be filtered </prefix>
+     !  <valueSubfield> the subfield where the authority code (such as GND number) is found </valueSubfield>
+     !  <idSubfield> the subfield where the authority id is found </idSubfield>
+     ! </authority>
+    -->
+    <authorities>
+        <authority id="gnd">
+            <uri>http://d-nb.info/gnd/</uri>
+            <prefix>(DE-588)</prefix>
+            <valueSubfield>0</valueSubfield>
+            <idSubfield>2</idSubfield>
+        </authority>
+        <authority id="rvk">
+            <idSubfield>2</idSubfield>
+        </authority>
+    </authorities>
+
+    <!--
+     ! Marc mappings section
+     !
+     ! Explanation of the fields:
+     !
+     !   <metadata docStructType=" voluntary name of a docStructType - this is only for types differing from the default ">
+     !       <field>Kitodo field name - must be unique for a given docStructType</field>
+     !       <marcfield>any number of field codes, e.g. 245a - a combination of data field and subfield</marcfield>
+     !       <altMarcfield>any number of alternative field codes - these will only be used if nothing found under the marcfield codes</altMarcfield>
+     !       <authority exclusive="true">the id of an auority defined in authorities section.
+     !                                     If  exclusive is set to true, only fields having this authority will be considered</authority>
+     !       <matching>Optional regex, if used, only strings matching the regex the will be considered.</matching>
+     !          ATTENTION: commas in regex have to be escaped with \
+     !       <replace> - any number of replacement patterns to be performed on the value
+     !           <pattern>Regex</pattern> ATTENTION: commas in regex have to be escaped with \
+     !           <replacement>Something</replacement>
+     !       </replace>
+     !   </metadata>
+    -->
+    <mapping>
+        <metadata>
+            <field>CatalogIDDigital</field>
+            <marcfield>001</marcfield>
+        </metadata>
+        <metadata>
+            <field>DocLanguage</field>
+            <marcfield>041a</marcfield>
+        </metadata>
+        <metadata>
+            <field>SizeSourcePrint</field>
+            <marcfield>300a</marcfield>
+            <replace>
+                <pattern>[: ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>PlaceOfPublication</field>
+            <marcfield>264a</marcfield>
+            <altMarcfield>260a</altMarcfield>
+            <replace>
+                <pattern>[: ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>PublisherName</field>
+            <marcfield>264b</marcfield>
+            <altMarcfield>260b</altMarcfield>
+            <replace>
+                <pattern>[\, ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>PublicationYear</field>
+            <marcfield>264c</marcfield>
+            <altMarcfield>260c</altMarcfield>
+            <replace>
+                <pattern>[. ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>SeriesOrder</field>
+            <marcfield>810v</marcfield>
+            <altMarcfield>490v</altMarcfield>
+        </metadata>
+        <metadata>
+            <field>TitleDocMainSeries</field>
+            <marcfield>810a</marcfield>
+            <altMarcfield>490a</altMarcfield>
+        </metadata>
+        <metadata>
+            <field>CatalogIDMainSeries</field>
+            <marcfield>810w</marcfield>
+            <altMarcfield>830w</altMarcfield>
+            <replace>
+                <pattern>^\(DE-.*?\)</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>TitleDocMain</field>
+            <marcfield>245a</marcfield>
+            <replace>
+                <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;(.*?)&#156;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>[:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata docStructType="Volume">
+            <field>TitleDocMain</field>
+            <marcfield>245p</marcfield>
+            <altMarcfield>245a</altMarcfield>
+            <replace>
+                <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;(.*?)&#156;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+            <replace>
+                <pattern>[:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>TitleDocSub1</field>
+            <marcfield>245b</marcfield>
+            <replace>
+                <pattern>[:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>TitleDocMainShort</field>
+            <marcfield>245a</marcfield>
+            <replace>
+                <pattern>&lt;&lt;.*?&gt;&gt;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;.*?&#156;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>[:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata docStructType="Volume">
+            <field>TitleDocMainShort</field>
+            <marcfield>245p</marcfield>
+            <altMarcfield>245a</altMarcfield>
+            <replace>
+                <pattern>&lt;&lt;.*?&gt;&gt;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>&#152;.*?&#156;</pattern>
+                <replacement></replacement>
+            </replace>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>CurrentNo</field>
+            <marcfield>245n</marcfield>
+            <replace>
+                <pattern>[.\,:/ ]+$</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>Author</field>
+            <marcfield>100a</marcfield>
+            <altMarcfield>700a</altMarcfield>
+            <authority>gnd</authority>
+            <replace>
+                <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+        </metadata>
+        <metadata>
+            <field>shelfmarksource</field>
+            <marcfield>852h</marcfield>
+            <altMarcfield>AVAd</altMarcfield>
+            <addToPhysDocStruct>true</addToPhysDocStruct>
+        </metadata>
+        <metadata>
+            <field>ISBN</field>
+            <marcfield>020a</marcfield>
+        </metadata>
+        <metadata>
+            <field>ISSN</field>
+            <marcfield>022a</marcfield>
+        </metadata>
+        <metadata>
+            <field>PublicationRun</field>
+            <marcfield>362a</marcfield>
+        </metadata>
+        <metadata>
+            <field>Keyword</field>
+            <marcfield>600a</marcfield>
+            <marcfield>610a</marcfield>
+            <marcfield>611a</marcfield>
+            <marcfield>630a</marcfield>
+            <marcfield>648a</marcfield>
+            <marcfield>650a</marcfield>
+            <marcfield>651a</marcfield>
+            <authority exclusive="true">gnd</authority>
+            <replace>
+                <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
+                <replacement>$1</replacement>
+            </replace>
+        </metadata>
+        <metadata> <!-- ZBD-ID -->
+            <field>CatalogIDPeriodicalDB</field>
+            <marcfield>035a</marcfield>
+            <matching>\(DE-599\)ZDB.*</matching>
+            <replace>
+                <pattern>\(DE-599\)</pattern>
+                <replacement></replacement>
+            </replace>
+        </metadata>
+    </mapping>
+</opacCatalogues>

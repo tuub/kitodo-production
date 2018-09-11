@@ -1,0 +1,248 @@
+<collection>
+    <record>
+        <leader>02646nam#a22006978ib4500</leader>
+        <controlfield tag="001">990007716160302884</controlfield>
+        <controlfield tag="005">20050621</controlfield>
+        <controlfield tag="007">tu</controlfield>
+        <controlfield tag="008">011009|2001####gw######r#####|||#u#ger#u</controlfield>
+        <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">52079823</subfield>
+            <subfield code="2">OCoLC</subfield>
+        </datafield>
+        <datafield ind1="7" ind2=" " tag="016">
+            <subfield code="a">962768235</subfield>
+            <subfield code="2">DE-101b</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="020">
+            <subfield code="a">3-506-79222-9</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">BV013958327</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(DE-599)BVBBV013958327</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(DE-604)BV013958327</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="040">
+            <subfield code="c">DE-604</subfield>
+            <subfield code="e">rakddb</subfield>
+            <subfield code="a">824-----</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="041">
+            <subfield code="a">ger</subfield>
+            <subfield code="2">ISO 639-2</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="044">
+            <subfield code="a">gw</subfield>
+            <subfield code="c">DE</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="4" tag="050">
+            <subfield code="a">DD221.O88 2001</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="4" tag="082">
+            <subfield code="a">943.08/092 21</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="4" tag="083">
+            <subfield code="a">943.08/092</subfield>
+            <subfield code="2">21</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">Gesch 20.27</subfield>
+            <subfield code="2">zT_KOM</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">NP 2790</subfield>
+            <subfield code="2">rvk</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">63</subfield>
+            <subfield code="2">sdnb</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="084">
+            <subfield code="a">G:de S:pg Z:34</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="4" tag="089">
+            <subfield code="a">943.08/092</subfield>
+            <subfield code="2">21</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="4" tag="089">
+            <subfield code="c">909</subfield>
+            <subfield code="f">09034</subfield>
+            <subfield code="g">43</subfield>
+            <subfield code="2">DDC22ger</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="0" tag="245">
+            <subfield code="a">Otto von Bismarck und die Parteien /</subfield>
+            <subfield code="c">Lothar Gall (Hrsg.).</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="1" tag="264">
+            <subfield code="a">Paderborn ; München [u.a.] :</subfield>
+            <subfield code="b">Schöningh,</subfield>
+            <subfield code="c">2001.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">XI, 154 S.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="336">
+            <subfield code="b">txt</subfield>
+            <subfield code="2">rdacontent</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="337">
+            <subfield code="b">n</subfield>
+            <subfield code="2">rdamedia</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="338">
+            <subfield code="b">nc</subfield>
+            <subfield code="2">rdacarrier</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="490">
+            <subfield code="a">Wissenschaftliche Reihe / Otto-von-Bismarck-Stiftung</subfield>
+            <subfield code="v">3</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="7" tag="600">
+            <subfield code="a">Bismarck, Otto von</subfield>
+            <subfield code="2">fes</subfield>
+            <subfield code="g">fes</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="0" tag="600">
+            <subfield code="a">Bismarck, Otto, Fürst von, 1815-1898 -- Congresses</subfield>
+        </datafield>
+        <datafield ind1="1" ind2="7" tag="600">
+            <subfield code="a">Bismarck, Otto &lt;&lt;von&gt;&gt;</subfield>
+            <subfield code="d">1815-1898</subfield>
+            <subfield code="0">(DE-588)11851136X</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="651">
+            <subfield code="a">Deutschland</subfield>
+            <subfield code="2">gnduebers</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="0" tag="651">
+            <subfield code="a">Germany -- Politics and government -- 1871-1918 -- Congresses</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="651">
+            <subfield code="a">Deutschland</subfield>
+            <subfield code="0">(DE-588)4011882-4</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="655">
+            <subfield code="a">Konferenzschrift</subfield>
+            <subfield code="0">(DE-588)1071861417</subfield>
+            <subfield code="y">2000</subfield>
+            <subfield code="z">Cadenabbia</subfield>
+            <subfield code="2">gnd-content</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="648">
+            <subfield code="a">Geschichte 1800-1900</subfield>
+            <subfield code="2">rswkuebers</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="648">
+            <subfield code="a">Geschichte 1871-1898</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+            <subfield code="a">Parteigeschichte</subfield>
+            <subfield code="2">fes</subfield>
+            <subfield code="g">fes</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+            <subfield code="a">Persönlichkeit, Politik</subfield>
+            <subfield code="2">fes</subfield>
+            <subfield code="g">fes</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+            <subfield code="a">Geschichte</subfield>
+            <subfield code="2">gnduebers</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+            <subfield code="a">Politik</subfield>
+            <subfield code="2">gnduebers</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="0" tag="650">
+            <subfield code="a">Political parties -- Germany -- History -- 19th century -- Congresses</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+            <subfield code="a">Partei</subfield>
+            <subfield code="0">(DE-588)4044737-6</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="0" tag="689">
+            <subfield code="p">Bismarck, Otto &lt;&lt;von&gt;&gt;</subfield>
+            <subfield code="d">1815-1898</subfield>
+            <subfield code="0">(DE-588)11851136X</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="1" tag="689">
+            <subfield code="g">Deutschland</subfield>
+            <subfield code="0">(DE-588)4011882-4</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="2" tag="689">
+            <subfield code="s">Partei</subfield>
+            <subfield code="0">(DE-588)4044737-6</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="3" tag="689">
+            <subfield code="z">Geschichte 1871-1898</subfield>
+            <subfield code="2">gnd</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="700">
+            <subfield code="a">Gall, Lothar</subfield>
+            <subfield code="d">1936-</subfield>
+            <subfield code="0">(DE-588)115523820</subfield>
+        </datafield>
+        <datafield ind1="2" ind2=" " tag="810">
+            <subfield code="a">Wissenschaftliche Reihe / Otto-von-Bismarck-Stiftung</subfield>
+            <subfield code="w">BV013180466</subfield>
+            <subfield code="v">3</subfield>
+            <subfield code="9">3</subfield>
+        </datafield>
+        <datafield ind1="4" ind2=" " tag="856">
+            <subfield code="u">http://digital.bib-bvb.de/webclient/DeliveryManager?pid=211217&amp;custom_att_2=simple_viewer</subfield>
+            <subfield code="3">Rezension</subfield>
+        </datafield>
+        <datafield ind1="4" ind2=" " tag="856">
+            <subfield code="u">http://bvbr.bib-bvb.de:8991/F?func=service&amp;doc_library=BVB01&amp;local_base=BVB01&amp;doc_number=009552688&amp;sequence=000002&amp;line_number=0002&amp;func_code=DB_RECORDS&amp;service_type=MEDIA</subfield>
+            <subfield code="3">Inhaltsverzeichnis</subfield>
+        </datafield>
+        <datafield ind1="n" ind2=" " tag="940">
+            <subfield code="a">DHB</subfield>
+        </datafield>
+        <datafield ind1="q" ind2=" " tag="940">
+            <subfield code="a">DHB_BSB_DDC1</subfield>
+        </datafield>
+        <datafield ind1="q" ind2=" " tag="940">
+            <subfield code="a">DHB_JDG_ISBN_1</subfield>
+        </datafield>
+        <datafield ind1="q" ind2=" " tag="940">
+            <subfield code="a">DHB_tkt1029</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="942">
+            <subfield code="a">05</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="INT">
+            <subfield code="a">P</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="INST">
+            <subfield code="a">49KOBV_TUBUDK</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="AVA">
+            <subfield code="0">990007716160302884</subfield>
+            <subfield code="8">22534780590002884</subfield>
+            <subfield code="a">49KOBV_TUBUDK</subfield>
+            <subfield code="b">HB</subfield>
+            <subfield code="c">3. Etage</subfield>
+            <subfield code="d">NP2790 9</subfield>
+            <subfield code="e">available</subfield>
+            <subfield code="f">1</subfield>
+            <subfield code="g">0</subfield>
+            <subfield code="i">PR</subfield>
+            <subfield code="j">FREI3</subfield>
+            <subfield code="k">8</subfield>
+            <subfield code="p">1</subfield>
+            <subfield code="q">TU Zentralbibliothek</subfield>
+        </datafield>
+    </record>
+</collection>

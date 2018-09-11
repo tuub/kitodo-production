@@ -1,0 +1,40 @@
+<collection>
+    <record>
+        <leader>00000nas a22      u 4500</leader>
+        <controlfield tag="001">BAB000313353</controlfield>
+        <controlfield tag="005">20150213105737.0</controlfield>
+        <controlfield tag="008">950711b        gw un   r     000 0 ger d</controlfield>
+        <controlfield tag="007">t</controlfield>
+        <datafield tag="024" ind1="7" ind2=" ">
+            <subfield code="a">1168614-5</subfield>
+            <subfield code="2">ZDB</subfield>
+        </datafield>
+        <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">DE-602</subfield>
+        </datafield>
+        <datafield tag="245" ind1="0" ind2="0">
+            <subfield code="a">Bücherei Oberbaum.</subfield>
+        </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+            <subfield code="a">Berlin :</subfield>
+            <subfield code="b">Oberbaumverl.</subfield>
+        </datafield>
+        <datafield tag="362" ind1="1" ind2=" ">
+            <subfield code="a">Nr. 1001.1978 - 1036.1984; 1037.1983 nachgewiesen</subfield>
+        </datafield>
+        <datafield tag="787" ind1="0" ind2="8">
+            <subfield code="i">1035=1983 von:</subfield>
+            <subfield code="t">Jahrbuch für junge Lyrik</subfield>
+            <subfield code="w">ZDB 4585-8</subfield>
+        </datafield>
+        <datafield tag="906" ind1=" " ind2=" ">
+            <subfield code="b">Schriftenreihe</subfield>
+        </datafield>
+        <datafield tag="049" ind1=" " ind2=" ">
+            <subfield code="a">DE-B479;000313353</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(DE-599)KBVBAB000313353</subfield>
+        </datafield>
+    </record>
+</collection>

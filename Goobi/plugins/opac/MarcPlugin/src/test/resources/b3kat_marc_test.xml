@@ -1,0 +1,61 @@
+<collection>
+    <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim">
+        <marc:leader>00000nam a2200000 c 4500</marc:leader>
+        <marc:controlfield tag="001">BV003105189</marc:controlfield>
+        <marc:controlfield tag="003">DE-604</marc:controlfield>
+        <marc:controlfield tag="005">19930722</marc:controlfield>
+        <marc:controlfield tag="007">t</marc:controlfield>
+        <marc:controlfield tag="008">900725s1968             |||| 00||| ger d</marc:controlfield>
+        <marc:datafield tag="035" ind1=" " ind2=" ">
+            <marc:subfield code="a">(OCoLC)631193463</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="035" ind1=" " ind2=" ">
+            <marc:subfield code="a">(DE-599)BVBBV003105189</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="041" ind1="1" ind2=" ">
+            <marc:subfield code="a">ger</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="100" ind1="1" ind2=" ">
+            <marc:subfield code="a">Bulgakov, Michail</marc:subfield>
+            <marc:subfield code="d">1891-1940</marc:subfield>
+            <marc:subfield code="e">Verfasser</marc:subfield>
+            <marc:subfield code="0">(DE-588)118517376</marc:subfield>
+            <marc:subfield code="4">aut</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="100" ind1="1" ind2=" ">
+            <marc:subfield code="a">Ball, Hugo</marc:subfield>
+            <marc:subfield code="e">Dada</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="240" ind1="1" ind2="0">
+            <marc:subfield code="a">Master i Margarita</marc:subfield>
+            <marc:subfield code="l">dt.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="245" ind1="1" ind2="0">
+            <marc:subfield code="a">Der Meister und Margarita</marc:subfield>
+            <marc:subfield code="b">Roman</marc:subfield>
+            <marc:subfield code="c">Michail Bulgakow. [Aus d. Russ. von Thomas Reschke]</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Berlin</marc:subfield>
+            <marc:subfield code="b">Dt. Buchgemeinschaft</marc:subfield>
+            <marc:subfield code="c">1968</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="260" ind1=" " ind2=" ">
+            <marc:subfield code="a">Testort</marc:subfield>
+            <marc:subfield code="b">Verlag</marc:subfield>
+            <marc:subfield code="c">1969/1970.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="300" ind1=" " ind2=" ">
+            <marc:subfield code="a">480 S.</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="700" ind1="1" ind2=" ">
+            <marc:subfield code="a">Reschke, Thomas</marc:subfield>
+            <marc:subfield code="e">Sonstige</marc:subfield>
+            <marc:subfield code="0">(DE-588)106594044</marc:subfield>
+            <marc:subfield code="4">oth</marc:subfield>
+        </marc:datafield>
+        <marc:datafield tag="940" ind1="1" ind2=" ">
+            <marc:subfield code="q">TUB-nvmb</marc:subfield>
+        </marc:datafield>
+    </marc:record>
+</collection>
