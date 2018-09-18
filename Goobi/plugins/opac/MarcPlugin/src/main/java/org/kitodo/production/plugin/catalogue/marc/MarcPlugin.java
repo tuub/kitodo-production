@@ -393,7 +393,7 @@ public class MarcPlugin implements Plugin {
             metadata.setAutorityFile(
                     valueMap.get("authId"),
                     valueMap.get("authUri"),
-                    valueMap.get("authValue"));
+                    valueMap.get("authUri") + valueMap.get("authValue"));
         }
     }
 

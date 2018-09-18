@@ -304,7 +304,7 @@
             <marcfield>035a</marcfield>
             <matching>\(DE-599\)ZDB.*</matching>
             <replace>
-                <pattern>\(DE-599\)</pattern>
+                <pattern>\(DE-599\)ZDB</pattern>
                 <replacement></replacement>
             </replace>
         </metadata>
