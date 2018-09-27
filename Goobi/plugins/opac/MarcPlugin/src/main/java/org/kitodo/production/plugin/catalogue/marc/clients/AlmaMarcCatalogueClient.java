@@ -46,6 +46,6 @@ public class AlmaMarcCatalogueClient extends AbstractCatalogueClient {
         Map<String, String> headers = new HashMap<>();
         headers.put("Authorization", "apikey " + params.get("apikey"));
 
-        return connect(urlString, timeout, headers);
+        return get(urlString, timeout, headers);
     }
 }

@@ -56,6 +56,7 @@ public class MarcKitodoMetadataMapper implements IMarcMetadataMapper {
             List<Map<String, String>> marcValues = Marc4jUtil.getMarcFieldValues(
                     marcRecord,
                     mapping.getMarcFields(),
+                    mapping.getAddSubfields(),
                     authority,
                     mapping.isAuthorityExclusive());
 
@@ -63,6 +64,7 @@ public class MarcKitodoMetadataMapper implements IMarcMetadataMapper {
                 marcValues = Marc4jUtil.getMarcFieldValues(
                         marcRecord,
                         mapping.getAltMarcFields(),
+                        mapping.getAddSubfields(),
                         authority,
                         mapping.isAuthorityExclusive());
             }

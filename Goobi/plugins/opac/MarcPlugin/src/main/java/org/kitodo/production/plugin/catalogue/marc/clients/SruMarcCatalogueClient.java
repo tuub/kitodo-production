@@ -13,13 +13,11 @@ package org.kitodo.production.plugin.catalogue.marc.clients;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
 import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * Catalogue Client querying an OAI-PMH server.
+ * Catalogue Client querying an SRU server.
  */
 public class SruMarcCatalogueClient extends AbstractCatalogueClient {
 
@@ -29,7 +27,7 @@ public class SruMarcCatalogueClient extends AbstractCatalogueClient {
      * Queries a catalogue using the given url and params.
      *
      * @param urlString the url of the catalogue.
-     * @param params    query params, MUST contain an identifier.
+     * @param params    query params map, MUST contain query key.
      * @param timeout timeout in ms
      * @return an InputStream with the response.
      */
@@ -45,6 +43,11 @@ public class SruMarcCatalogueClient extends AbstractCatalogueClient {
                 + StringUtils.substringAfter(params.get("query"), ":");
         //query = URLEncoder.encode(query, Charset.forName("UTF-8"));
 
+        // At the moment, you can only search for single words/names by author or title search, to extend this,
+        // you would need a query parser.
+        // However, the author/title search in the sru interface is only there to check, that it would work in principle.
+        // We know of no libraries who has need for such a feature.
+
         String maxRecords = DEFAULT_MAX_RECORDS;
         if (params.get("maxRecords") != null) {
             maxRecords = params.get("maxRecords");
@@ -53,6 +56,6 @@ public class SruMarcCatalogueClient extends AbstractCatalogueClient {
 
         urlString = urlString.replace("{query}", query);
 
-        return connect(urlString, timeout, null);
+        return get(urlString, timeout, null);
     }
 }

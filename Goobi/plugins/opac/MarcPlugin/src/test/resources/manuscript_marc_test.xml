@@ -1,0 +1,144 @@
+<collection>
+    <mx:record xmlns:mx="http://www.loc.gov/MARC21/slim" id="5496610">
+        <mx:leader>03379cam a2200024 c 4500</mx:leader>
+        <mx:controlfield tag="001">5496610</mx:controlfield>
+        <mx:controlfield tag="005">20171013</mx:controlfield>
+        <mx:controlfield tag="007">ta</mx:controlfield>
+        <mx:controlfield tag="008">170907s1494uuuu|||||| | |||||||||||lat||</mx:controlfield>
+        <mx:datafield tag="024" ind1="8" ind2=" ">
+            <mx:subfield code="a">ISTC in00119000</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="035" ind1=" " ind2=" ">
+            <mx:subfield code="a">(OCoLC)1004333401</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="035" ind1=" " ind2=" ">
+            <mx:subfield code="a">(XX-XxUND)BVBBV044478748</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="035" ind1=" " ind2=" ">
+            <mx:subfield code="a">(DE-604)BV044478748</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="040" ind1=" " ind2=" ">
+            <mx:subfield code="a">DE-19</mx:subfield>
+            <mx:subfield code="e">rda</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="100" ind1="1" ind2=" ">
+            <mx:subfield code="a">Nicolaus</mx:subfield>
+            <mx:subfield code="c">de Lyra</mx:subfield>
+            <mx:subfield code="d">1270-1349</mx:subfield>
+            <mx:subfield code="0">(DE-588)119238683</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="100" ind1="1" ind2=" ">
+            <mx:subfield code="a">Harald</mx:subfield>
+            <mx:subfield code="c">Blåtand</mx:subfield>
+            <mx:subfield code="d">910-987</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="100" ind1="1" ind2=" ">
+            <mx:subfield code="a">Homeros</mx:subfield>
+            <mx:subfield code="d">800 v. Chr.</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="245" ind1="0" ind2="0">
+            <mx:subfield code="a">Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de
+                Ales)
+            </mx:subfield>
+            <mx:subfield code="9">
+                Nicolaus1de1Lyra000000000000000000000000000000000000000000000000000000000000000000000000000000000000Postilla0super0Epistolas0et0Evangelia0quadragesimalia0cum0Quaestionibus0Antonii0Betontini0et0Ale0000000000014940Venedig000000Johannes0Hamman0fü
+            </mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="260" ind1=" " ind2=" ">
+            <mx:subfield code="a">Venedig</mx:subfield>
+            <mx:subfield code="b">Johannes Hamman, für Octavianus Scotus</mx:subfield>
+            <mx:subfield code="c">13.12.1494</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="264" ind1=" " ind2="1">
+            <mx:subfield code="a">Venedig</mx:subfield>
+            <mx:subfield code="b">Johannes Hamman, für Octavianus Scotus</mx:subfield>
+            <mx:subfield code="c">13.12.1494</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="300" ind1=" " ind2=" ">
+            <mx:subfield code="c">8°</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="336" ind1=" " ind2=" ">
+            <mx:subfield code="a">Text</mx:subfield>
+            <mx:subfield code="b">txt</mx:subfield>
+            <mx:subfield code="2">rdacontent</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="337" ind1=" " ind2=" ">
+            <mx:subfield code="a">ohne Hilfsmittel zu benutzen</mx:subfield>
+            <mx:subfield code="b">n</mx:subfield>
+            <mx:subfield code="2">rdamedia</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="338" ind1=" " ind2=" ">
+            <mx:subfield code="a">Band</mx:subfield>
+            <mx:subfield code="b">nc</mx:subfield>
+            <mx:subfield code="2">rdacarrier</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="500" ind1=" " ind2=" ">
+            <mx:subfield code="a">Bibliografischer Nachweis: Goff N119; HR 10390; Pestail-Lota 2; Polain (B) 4600; IBE 2287; IGI 6828; IBP
+                3953; IBPort 1279; Kotvan 882; Mendes 896; Martín Abad N-19; Walsh 2235; Oates 2043; BMC V 426; GW M26590
+            </mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="583" ind1=" " ind2=" ">
+            <mx:subfield code="a">Langzeitarchivierung durch Universitätsbibliothek der Ludwig-Maximilians-Universität München</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="655" ind1=" " ind2="7">
+            <mx:subfield code="a">Inkunabel</mx:subfield>
+            <mx:subfield code="0">(DE-588)4027041-5</mx:subfield>
+            <mx:subfield code="2">gnd-content</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="776" ind1="0" ind2="8">
+            <mx:subfield code="d">München</mx:subfield>
+            <mx:subfield code="e">Universitätsbibliothek der Ludwig-Maximilians-Universität München</mx:subfield>
+            <mx:subfield code="f">2017</mx:subfield>
+            <mx:subfield code="i">Elektronische Reproduktion</mx:subfield>
+            <mx:subfield code="o">urn:nbn:de:bvb:19-epub-21885-8</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="856" ind1=" " ind2=" ">
+            <mx:subfield code="u">http://data.cerl.org/istc/in00119000</mx:subfield>
+            <mx:subfield code="3">Ausführliche Beschreibung</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="856" ind1=" " ind2="1">
+            <mx:subfield code="u">http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-21885-8</mx:subfield>
+            <mx:subfield code="x">Resolving-System</mx:subfield>
+            <mx:subfield code="z">kostenfrei</mx:subfield>
+            <mx:subfield code="3">Volltext // Exemplar mit der Signatur: München, Universitätsbibliothek der Ludwig-Maximilians-Universität
+                -- 0001/8 Inc.lat. 30
+            </mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="940" ind1=" " ind2=" ">
+            <mx:subfield code="e">digit</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="982" ind1=" " ind2=" ">
+            <mx:subfield code="a">0001/8 Inc.lat. 30</mx:subfield>
+            <mx:subfield code="q">ab</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="983" ind1=" " ind2=" ">
+            <mx:subfield code="D">07.09.2017</mx:subfield>
+            <mx:subfield code="b">0</mx:subfield>
+            <mx:subfield code="c">0001</mx:subfield>
+            <mx:subfield code="d">B</mx:subfield>
+            <mx:subfield code="j">0001/8 Inc.lat. 30</mx:subfield>
+            <mx:subfield code="n">Bitte nutzen Sie das Volltext-Digitalisat</mx:subfield>
+            <mx:subfield code="p">99995585945</mx:subfield>
+            <mx:subfield code="t">32</mx:subfield>
+            <mx:subfield code="u">1</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="999" ind1="1" ind2="1">
+            <mx:subfield code="1">Keine Angabe</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="999" ind1="2" ind2="1">
+            <mx:subfield code="1">Zentralbibliothek</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="999" ind1="5" ind2="1">
+            <mx:subfield code="1">Druckschrift</mx:subfield>
+            <mx:subfield code="1">Monographie</mx:subfield>
+            <mx:subfield code="1">E-Book</mx:subfield>
+            <mx:subfield code="1">Digitalisat</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="999" ind1="7" ind2="1">
+            <mx:subfield code="1">1494</mx:subfield>
+        </mx:datafield>
+        <mx:datafield tag="999" ind1="a" ind2="a">
+            <mx:subfield code="1">load201710140926</mx:subfield>
+        </mx:datafield>
+    </mx:record>
+</collection>

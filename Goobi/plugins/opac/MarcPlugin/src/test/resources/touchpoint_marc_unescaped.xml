@@ -1,0 +1,37 @@
+<collection><mx:record xmlns:mx="http://www.loc.gov/MARC21/slim" id="5496610">
+<mx:leader>03379cam a2200024 c 4500</mx:leader>
+<mx:controlfield tag="001">5496610</mx:controlfield>
+<mx:controlfield tag="005">20171013</mx:controlfield>
+<mx:controlfield tag="007">ta</mx:controlfield>
+<mx:controlfield tag="008">170907s1494uuuu|||||| | |||||||||||lat||</mx:controlfield>
+<mx:datafield tag="024" ind1="8" ind2=" ">
+<mx:subfield code="a">ISTC in00119000</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="035" ind1=" " ind2=" ">
+<mx:subfield code="a">(OCoLC)1004333401</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="035" ind1=" " ind2=" ">
+<mx:subfield code="a">(XX-XxUND)BVBBV044478748</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="035" ind1=" " ind2=" ">
+<mx:subfield code="a">(DE-604)BV044478748</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="040" ind1=" " ind2=" ">
+<mx:subfield code="a">DE-19</mx:subfield>
+<mx:subfield code="e">rda</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="100" ind1="1" ind2=" ">
+<mx:subfield code="a">Nicolaus</mx:subfield>
+<mx:subfield code="c">de Lyra</mx:subfield>
+<mx:subfield code="d">1270-1349</mx:subfield>
+<mx:subfield code="0">(DE-588)119238683</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="245" ind1="0" ind2="0">
+<mx:subfield code="a">Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</mx:subfield>
+</mx:datafield>
+<mx:datafield tag="260" ind1=" " ind2=" ">
+<mx:subfield code="a">Venedig</mx:subfield>
+<mx:subfield code="b">Johannes Hamman, für Octavianus Scotus</mx:subfield>
+<mx:subfield code="c">13.12.1494</mx:subfield>
+</mx:datafield>
+</mx:record></collection>

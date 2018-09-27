@@ -49,6 +49,6 @@ public class OaiMarcCatalogueClient extends AbstractCatalogueClient {
             urlString += "?verb=GetRecord&metadataPrefix=marc21&identifier=" + identifier;
         }
 
-        return connect(urlString, timeout, null);
+        return get(urlString, timeout, null);
     }
 }

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+
+<lst name="responseHeader">
+  <int name="status">0</int>
+  <int name="QTime">1</int>
+  <lst name="params">
+    <str name="indent">true</str>
+    <str name="q">identifier:BV044478748</str>
+    <str name="wt">xml</str>
+  </lst>
+</lst>
+<result name="response" numFound="1" start="0">
+  <doc>
+    <str name="loadtimestamp">load201710140926</str>
+    <arr name="year_facet">
+      <str>1494</str>
+    </arr>
+    <arr name="location">
+      <str>Zentralbibliothek</str>
+    </arr>
+    <arr name="location_facet">
+      <str>Zentralbibliothek</str>
+    </arr>
+    <arr name="remark">
+      <str>Bibliografischer Nachweis: Goff N119; HR 10390; Pestail-Lota 2; Polain (B) 4600; IBE 2287; IGI 6828; IBP 3953; IBPort 1279; Kotvan 882; Mendes 896; Martín Abad N-19; Walsh 2235; Oates 2043; BMC V 426; GW M26590</str>
+    </arr>
+    <arr name="author_autocom">
+      <str>Nicolaus</str>
+    </arr>
+    <arr name="author_autocomplete">
+      <str>Nicolaus</str>
+    </arr>
+    <arr name="freesearch_autocomplete">
+      <str>Nicolaus</str>
+      <str>Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</str>
+      <str>Bibliografischer Nachweis: Goff N119; HR 10390; Pestail-Lota 2; Polain (B) 4600; IBE 2287; IGI 6828; IBP 3953; IBPort 1279; Kotvan 882; Mendes 896; Martín Abad N-19; Walsh 2235; Oates 2043; BMC V 426; GW M26590</str>
+    </arr>
+    <str name="bib_sort">Nicolaus de Lyra                                                                                    Postilla super Epistolas et Evangelia quadragesimalia cum Quaestionibus Antonii Betontini et Ale            494 Venedig      Johannes Hamman fü</str>
+    <arr name="publisher">
+      <str>Venedig</str>
+      <str>Johannes Hamman, für Octavianus Scotus</str>
+    </arr>
+    <str name="id">5496610</str>
+    <arr name="authors">
+      <str>(DE-588)119238683</str>
+      <str>Nicolao &lt;de Lyra&gt;</str>
+    </arr>
+    <arr name="author_facet">
+      <str>Nicolaus</str>
+    </arr>
+    <arr name="title">
+      <str>Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</str>
+      <str>Bibliografischer Nachweis: Goff N119; HR 10390; Pestail-Lota 2; Polain (B) 4600; IBE 2287; IGI 6828; IBP 3953; IBPort 1279; Kotvan 882; Mendes 896; Martín Abad N-19; Walsh 2235; Oates 2043; BMC V 426; GW M26590</str>
+    </arr>
+    <arr name="title_autocomplete">
+      <str>Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</str>
+      <str>Bibliografischer Nachweis: Goff N119; HR 10390; Pestail-Lota 2; Polain (B) 4600; IBE 2287; IGI 6828; IBP 3953; IBPort 1279; Kotvan 882; Mendes 896; Martín Abad N-19; Walsh 2235; Oates 2043; BMC V 426; GW M26590</str>
+    </arr>
+    <str name="volumecount1_sort">쎿</str>
+    <str name="year">1494</str>
+    <date name="acqdate">2017-09-07T00:00:00.01Z</date>
+    <str name="volume_sort">쎿</str>
+    <str name="location_sort">쎿</str>
+    <arr name="oclcnr">
+      <str>(OCoLC)1004333401</str>
+    </arr>
+    <str name="marc">&lt;mx:record xmlns:mx="http://www.loc.gov/MARC21/slim" id="5496610"&gt;
+&lt;mx:leader&gt;03379cam a2200024 c 4500&lt;/mx:leader&gt;
+&lt;mx:controlfield tag="001"&gt;5496610&lt;/mx:controlfield&gt;
+&lt;mx:controlfield tag="005"&gt;20171013&lt;/mx:controlfield&gt;
+&lt;mx:controlfield tag="007"&gt;ta&lt;/mx:controlfield&gt;
+&lt;mx:controlfield tag="008"&gt;170907s1494uuuu|||||| | |||||||||||lat||&lt;/mx:controlfield&gt;
+&lt;mx:datafield tag="024" ind1="8" ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;ISTC in00119000&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="035" ind1=" " ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;(OCoLC)1004333401&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="035" ind1=" " ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;(XX-XxUND)BVBBV044478748&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="035" ind1=" " ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;(DE-604)BV044478748&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="040" ind1=" " ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;DE-19&lt;/mx:subfield&gt;
+&lt;mx:subfield code="e"&gt;rda&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="100" ind1="1" ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;Nicolaus&lt;/mx:subfield&gt;
+&lt;mx:subfield code="c"&gt;de Lyra&lt;/mx:subfield&gt;
+&lt;mx:subfield code="d"&gt;1270-1349&lt;/mx:subfield&gt;
+&lt;mx:subfield code="0"&gt;(DE-588)119238683&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="245" ind1="0" ind2="0"&gt;
+&lt;mx:subfield code="a"&gt;Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;mx:datafield tag="260" ind1=" " ind2=" "&gt;
+&lt;mx:subfield code="a"&gt;Venedig&lt;/mx:subfield&gt;
+&lt;mx:subfield code="b"&gt;Johannes Hamman, für Octavianus Scotus&lt;/mx:subfield&gt;
+&lt;mx:subfield code="c"&gt;13.12.1494&lt;/mx:subfield&gt;
+&lt;/mx:datafield&gt;
+&lt;/mx:record&gt;</str>
+    <int name="year_sort">1494</int>
+    <str name="volumecount2_sort">0</str>
+    <arr name="mtype">
+      <str>Druckschrift</str>
+      <str>Monographie</str>
+      <str>E-Book</str>
+      <str>Digitalisat</str>
+    </arr>
+    <arr name="mtype_facet">
+      <str>Druckschrift</str>
+      <str>Monographie</str>
+      <str>E-Book</str>
+      <str>Digitalisat</str>
+    </arr>
+    <arr name="medianumber">
+      <str>99995585945</str>
+    </arr>
+    <arr name="branchlib">
+      <str>0</str>
+    </arr>
+    <str name="title_sort">Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</str>
+    <str name="author_sort">Nicolaus</str>
+    <str name="help_sort">쎿</str>
+    <arr name="title_boundary">
+      <str>Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)</str>
+    </arr>
+    <arr name="fremdidauthor">
+      <str>(DE-588)119238683</str>
+    </arr>
+    <date name="freshness">1494-01-01T00:00:01Z</date>
+    <arr name="language">
+      <str>lat</str>
+    </arr>
+    <arr name="language_facet">
+      <str>lat</str>
+    </arr>
+    <arr name="rest">
+      <str>ISTC in00119000</str>
+      <str>Ausführliche Beschreibung</str>
+      <str>Resolving-System</str>
+      <str>kostenfrei</str>
+      <str>Volltext // Exemplar mit der Signatur: München, Universitätsbibliothek der Ludwig-Maximilians-Universität -- 0001/8 Inc.lat. 30</str>
+      <str>digit</str>
+      <str>0</str>
+      <str>0001</str>
+      <str>Bitte nutzen Sie das Volltext-Digitalisat</str>
+      <str>32</str>
+    </arr>
+    <arr name="shelfmark">
+      <str>0001/8 Inc.lat. 30</str>
+    </arr>
+    <arr name="identifier">
+      <str>ISTC in00119000</str>
+      <str>(OCoLC)1004333401</str>
+      <str>(XX-XxUND)BVBBV044478748</str>
+      <str>(DE-604)BV044478748</str>
+      <str>http://data.cerl.org/istc/in00119000</str>
+      <str>http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-21885-8</str>
+    </arr>
+    <arr name="fach">
+      <str>Keine Angabe</str>
+    </arr>
+    <arr name="fach_facet">
+      <str>Keine Angabe</str>
+    </arr>
+    <arr name="stdsigel">
+      <str>0001</str>
+    </arr>
+    <long name="_version_">1581216953136054272</long>
+    <date name="timestamp">2017-10-14T07:26:36.872Z</date>
+    <bool name="statusband">false</bool></doc>
+</result>
+<lst name="highlighting">
+  <lst name="5496610"/>
+</lst>
+</response>

@@ -107,7 +107,19 @@ public class MarcOpacConfigTest {
         assertNotNull("The mappings map must not be null", mappings);
         assertNotNull("There should be a TitleDocMain entry", mappings.get("TitleDocMain"));
         assertNotNull("There should be an Author entry", mappings.get("Author"));
-        assertEquals("The TitleDocMain entry should have marc field 245p", "245p", mappings.get("TitleDocMain").getMarcFields().get(0));
+        assertEquals("The TitleDocMain entry should have marc field 245a", "245a", mappings.get("TitleDocMain").getMarcFields().get(0));
+        assertEquals("The TitleDocMain entry should have three additional subfield", 3, mappings.get("TitleDocMain").getAddSubfields().size());
+        assertEquals("The TitleDocMain entry should additional subfield 'p' with separator ' : '", " : ",
+                mappings.get("TitleDocMain").getAddSubfields().get("p"));
+        assertEquals("The TitleDocMain entry should additional subfield 'n' with separator ', '", ", ",
+                mappings.get("TitleDocMain").getAddSubfields().get("n"));
+
+        assertEquals("The TitleDocMain entry should additional subfield 'q' with separator '' (none)", "",
+                mappings.get("TitleDocMain").getAddSubfields().get("q"));
+
+        assertEquals("The additional subfield entries should be in the same order as in the configuration file",
+                "[p, n, q]", mappings.get("TitleDocMain").getAddSubfields().keySet().toString());
+
         assertNotNull("The TitleDocMain entry should have a replacemants map", mappings.get("TitleDocMain").getReplacements());
         assertEquals("The TitleDocMain entry should have two replacements", 3, mappings.get("TitleDocMain").getReplacements().size());
         assertEquals("The Author should have alternative marc field 700a", "700a", mappings.get("Author").getAltMarcFields().get(0));

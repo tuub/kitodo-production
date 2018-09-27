@@ -28,6 +28,8 @@ public class MarcOpacConfig {
 
     private static final Logger logger = Logger.getLogger(MarcOpacConfig.class);
 
+    private static final String DEFAULT_ADD_SUBFIELD_SEPARATOR = " ";
+
     private XMLConfiguration xmlConfiguration;
 
     private List<String> supportedCatalogues;
@@ -152,6 +154,19 @@ public class MarcOpacConfig {
             }
             for (Object altMarcField : mapping.configurationsAt("altMarcfield")) {
                 marcMapping.addAltMarcField(((SubnodeConfiguration) altMarcField).getString(""));
+            }
+            for (Object addSubfield : mapping.configurationsAt("addSubfield")) {
+                String subfield = ((SubnodeConfiguration) addSubfield).getString("");
+                String separator =  ((SubnodeConfiguration) addSubfield).getString("@separator");
+                if (separator == null) {
+                    separator = DEFAULT_ADD_SUBFIELD_SEPARATOR;
+                }
+                // The attribute with separator will automatically be trimmed by the Apache Configurations.
+                // As a fix to be able to have spaces in the separators, we allow the separator to be surrounded by ' and delete them
+                if (separator.matches("'.*?'")) {
+                    separator = separator.replaceFirst("'(.*?)'", "$1");
+                }
+                marcMapping.getAddSubfields().put(subfield, separator);
             }
             for (Object replace : mapping.configurationsAt("replace")) {
                 marcMapping.getReplacements().put(

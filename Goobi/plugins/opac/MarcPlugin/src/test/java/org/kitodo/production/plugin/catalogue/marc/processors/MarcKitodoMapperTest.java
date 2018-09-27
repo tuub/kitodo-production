@@ -121,6 +121,48 @@ public class MarcKitodoMapperTest {
         assertEquals("There value of the Classification should be 'NP 2790'", "NP 2790", mappings.get("Classification").get(0).get("value"));
     }
 
+    @Test
+    public void testAddSubfields() {
+        Record record = readMarcRecord("multivolume_marc_test.xml");
+        assertNotNull(record);
+
+        Map<String, List<Map<String, String>>> mappings = marcKitodoMapper.map(
+                record,
+                marcOpacConfig.getMappings("Volume"),
+                marcOpacConfig.getAuthorities());
+
+        assertNotNull(mappings);
+        assertNotNull("There should be a title field", mappings.get("TitleDocMain"));
+        assertEquals("There should be one title", 1, mappings.get("TitleDocMain").size());
+        assertEquals("There should title should be composed from several subfields with separators",
+                "Immanuel Kants Werke : Kritik der praktischen Vernunft, 5", mappings.get("TitleDocMain").get(0).get("value"));
+
+    }
+
+    @Test
+    public void testAddSubfields2() {
+        Record record = readMarcRecord("manuscript_marc_test.xml");
+        assertNotNull(record);
+
+        Map<String, List<Map<String, String>>> mappings = marcKitodoMapper.map(
+                record,
+                marcOpacConfig.getMappings("Manuscript"),
+                marcOpacConfig.getAuthorities());
+
+        assertNotNull(mappings);
+        assertNotNull("There should be an author field", mappings.get("Author"));
+        assertEquals("There should be three authors", 3, mappings.get("Author").size());
+        assertEquals("There first should be composed of name and title (100a and c)",
+                "Nicolaus de Lyra", mappings.get("Author").get(0).get("value"));
+        assertEquals("There second should be composed of name and title (100a and c)",
+                "Harald Blåtand", mappings.get("Author").get(1).get("value"));
+        assertEquals("There third author should only have a name from 100a",
+                "Homeros", mappings.get("Author").get(2).get("value"));
+
+    }
+
+
+
     private Record readMarcRecord(String resourceName) {
         InputStream marcStream = ClassLoader.getSystemResourceAsStream(resourceName);
         MarcReader reader = new MarcXmlReader(marcStream);

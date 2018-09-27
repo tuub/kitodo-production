@@ -54,4 +54,24 @@ public class MarcXmlDomRecordTransformerTest {
 
     }
 
+    @Test
+    public void testTransformFromSolrMarcXml() {
+        ClassLoader classLoader = getClass().getClassLoader();
+        // The unescaping of the solr response ist tested elsewhere
+        InputStream inputStream = classLoader.getResourceAsStream("touchpoint_marc_unescaped.xml");
+
+        List<Record> marcRecords = transformer.transform(inputStream, "mx:record");
+
+        assertEquals("The marc record list should contain one object", 1, marcRecords.size());
+
+        Record marcRecord = marcRecords.get(0);
+        ControlField controlField = (ControlField) marcRecord.getVariableField("001");
+        assertEquals("The id in control field 001 should be 5496610", "5496610", controlField.getData());
+
+        DataField titleField = (DataField) marcRecord.getVariableField("245");
+        assertEquals("The title in 245a must be correct",
+                "Postilla super Epistolas et Evangelia quadragesimalia (cum Quaestionibus Antonii Betontini et Alexandri de Ales)",
+                titleField.getSubfield('a').getData());
+
+    }
 }

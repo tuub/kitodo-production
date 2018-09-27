@@ -339,6 +339,11 @@ public class MarcPlugin implements Plugin {
 
         for (String metadataField : mappings.keySet()) {
             MetadataType metadataType = preferences.getMetadataTypeByName(metadataField);
+            if (metadataType == null) {
+                logger.error("Metadata type '" + metadataField + "' configured in " + OPAC_CONFIGURATION_FILE
+                        + " does not exist in the ruleset.xml. Skipping field.");
+                continue;
+            }
             List<Map<String, String>> values = mappings.get(metadataField);
             if (CollectionUtils.isEmpty(values)) {
                 continue;

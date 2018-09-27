@@ -13,6 +13,7 @@ package org.kitodo.production.plugin.catalogue.marc.config;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -61,6 +62,11 @@ public class MarcMapping {
      * A map of replacements to be performed on the field value. Key: regex, value: replacement.
      */
     private Map<String, String> replacements = new HashMap<>();
+
+    /**
+     * A map of additional subfields. Key: subfield code, value: separator.
+     */
+    private Map<String, String> addSubfields = new LinkedHashMap<>();
 
 
     public String getField() {
@@ -134,4 +140,13 @@ public class MarcMapping {
     public void setAuthorityExclusive(boolean authorityExclusive) {
         this.authorityExclusive = authorityExclusive;
     }
+
+    public Map<String, String> getAddSubfields() {
+        return addSubfields;
+    }
+
+    public void setAddSubfields(Map<String, String> addSubfields) {
+        this.addSubfields = addSubfields;
+    }
+
 }

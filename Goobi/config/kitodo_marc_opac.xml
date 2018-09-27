@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opacCatalogues>
+
+    <!--
+      Example configuration of the marc plugin. You will need to adapt this file to your needs and other settings in Kitodo.Production.
+      Especially, the settings need to harmonize with the settings in ruleset.xml and goobi_projects.xml.
+    -->
+
     <!--
      ! Catalogue client section
      !
@@ -13,6 +19,7 @@
                     maxRecords="15"/>
             <searchFields>
                 <searchField label="Identifier" value="marcxml.idn"/>
+                <!-- The fields title, author and subject are defined only for test purposes. For the present, they accept only single words. -->
                 <searchField label="Title" value="marcxml.title"/>
                 <searchField label="Author" value="marcxml.creator"/>
                 <searchField label="Subject" value="marcxml.subject"/>
@@ -27,6 +34,14 @@
             </searchFields>
         </catalogue>
         <!--
+        <catalogue title="Touchpoint Solr">
+            <config url=""
+                    class="org.kitodo.production.plugin.catalogue.marc.clients.SolrMarcCatalogueClient"
+                    recordTag="mx:record"/>
+            <searchFields>
+                <searchField label="Identifier" value="?"/>
+            </searchFields>
+        </catalogue>
         <catalogue title="Some ALMA API">
             <config url="https://api-eu.hosted.exlibrisgroup.com/almaws/v1/bibs/{mms_id}?expand=p_avail"
                     apikey="secret"
@@ -50,6 +65,15 @@
      ! if it does NOT have a reference to a parent record in 773w. Otherwise, it is a part of a multi volume work.
      ! (One may also check the 19th character in the leader field, but this is not reliable.)
      !
+     ! Explanation of the fields:
+     !   <type isMultiVolume="true/false" isPeriodical="true/false" rulesetType="<see your ruleset.xml>"
+                    title="<ruleset type title of the doc type in the process creation form >" physDocStructType="BoundBook">
+     !      <marcLeader>am</marcLeader> The characters at position 6-7 in the marc leader field.
+     !      <notContainingField>773w</notContainingField> Optional, records containing this field will not be considered for the doc type.
+     !      <parentField>773w</parentField> Optional, parent field for multi volume works.
+     !      <parentFieldFilter>\(DE-.+\)</parentFieldFilter> Optional, filter regex for the parent field.
+     !   </type>
+     !
     -->
     <doctypes>
         <type isMultiVolume="false" isPeriodical="false" rulesetType="Monograph" title="monograph" physDocStructType="BoundBook">
@@ -65,6 +89,9 @@
         <type isMultiVolume="false" isPeriodical="true" rulesetType="Periodical" childRulesetType="PeriodicalVolume" title="periodical"
               physDocStructType="BoundBook">
             <marcLeader>as</marcLeader>
+        </type>
+        <type isMultiVolume="false" isPeriodical="false" rulesetType="Manuscript" title="manuscript" physDocStructType="BoundBook">
+            <marcLeader>tm</marcLeader>
         </type>
     </doctypes>
 
@@ -99,10 +126,19 @@
      !
      !   <metadata docStructType=" voluntary name of a docStructType - this is only for types differing from the default ">
      !       <field>Kitodo field name - must be unique for a given docStructType</field>
-     !       <marcfield>any number of field codes, e.g. 245a - a combination of data field and subfield</marcfield>
+     !       <marcfield>any number of field codes, e.g. 245a - a combination of data field and subfield. If you configure more than one
+     !                     marcfield code, all entries found in the record will be used. If you wish to query a field only if nothing
+     !                     found in the first field, please use the construct altMarcfield below.
      !       <altMarcfield>any number of alternative field codes - these will only be used if nothing found under the marcfield codes</altMarcfield>
-     !       <authority exclusive="true">the id of an auority defined in authorities section.
-     !                                     If  exclusive is set to true, only fields having this authority will be considered</authority>
+     !       <addSubfield separator=""> Any number of additional subfields to be added to the main value.
+     !            The subfields are added in the order of the configured fields. A separator string may be defined, the default is space.
+     !            ATTENTION: in order to have separators using space characters at the begin or at the end, you have to to put the
+     !              separator in additional single quotation marks. See example of volume title below.
+     !            ATTENTION 2: the matching and replace functions configured below are performed on the complete composed value,
+     !              not on the single subfields.
+     !            ATTENTION 3: commas in the separator have to be escaped with \
+     !       <authority exclusive="true/false">the id of an authority defined in the authorities section.
+     !                                     If exclusive is set to true, only fields having this authority will be considered. Default: false.
      !       <matching>Optional regex, if used, only strings matching the regex the will be considered.</matching>
      !          ATTENTION: commas in regex have to be escaped with \
      !       <replace> - any number of replacement patterns to be performed on the value
@@ -248,6 +284,14 @@
                 <replacement></replacement>
             </replace>
         </metadata>
+        <!-- This is an example of how you may construct volume titles using several subfields
+        <metadata docStructType="Volume">
+            <field>TitleDocMainShort</field>
+            <marcfield>245a</marcfield>
+            <addSubfield separator="' : '">p</addSubfield>
+            <addSubfield separator="'\, '">n</addSubfield>
+        </metadata>
+        -->
         <metadata>
             <field>CurrentNo</field>
             <marcfield>245n</marcfield>
@@ -265,6 +309,12 @@
                 <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>
                 <replacement>$1</replacement>
             </replace>
+        </metadata>
+        <metadata docStructType="Manuscript">
+            <field>Author</field>
+            <marcfield>100a</marcfield>
+            <marcfield>700a</marcfield>
+            <addSubfield>c</addSubfield>
         </metadata>
         <metadata>
             <field>shelfmarksource</field>
@@ -293,6 +343,9 @@
             <marcfield>648a</marcfield>
             <marcfield>650a</marcfield>
             <marcfield>651a</marcfield>
+            <altMarcfield>689p</altMarcfield>
+            <altMarcfield>689s</altMarcfield>
+            <altMarcfield>689g</altMarcfield>
             <authority exclusive="true">gnd</authority>
             <replace>
                 <pattern>&lt;&lt;(.*?)&gt;&gt;</pattern>

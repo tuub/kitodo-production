@@ -123,7 +123,10 @@
         </metadata>
         <metadata docStructType="Volume">
             <field>TitleDocMain</field>
-            <marcfield>245p</marcfield>
+            <marcfield>245a</marcfield>
+            <addSubfield separator="' : '">p</addSubfield>
+            <addSubfield separator="'\, '">n</addSubfield>
+            <addSubfield separator="">q</addSubfield>
             <replace>
                 <pattern>&lt;&lt;(.*)&gt;&gt;</pattern>
                 <replacement>$1</replacement>
@@ -167,6 +170,11 @@
             <altMarcfield>700a</altMarcfield>
             <matching>.+\,.+</matching>
             <authority>gnd</authority>
+        </metadata>
+        <metadata docStructType="Manuscript">
+            <field>Author</field>
+            <marcfield>100a</marcfield>
+            <addSubfield>c</addSubfield>
         </metadata>
         <metadata>
             <field>shelfmarksource</field>

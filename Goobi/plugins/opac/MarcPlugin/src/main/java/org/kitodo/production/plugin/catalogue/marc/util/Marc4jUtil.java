@@ -37,11 +37,11 @@ public class Marc4jUtil {
      * @return a list of values
      */
     public static List<Map<String, String>> getMarcFieldValues(Record record, List<String> tagCodes) {
-        return getMarcFieldValues(record, tagCodes, null, false);
+        return getMarcFieldValues(record, tagCodes, null, null, false);
     }
 
     /**
-     * Gets all marc record field values and possibly corresponding authority values matching a given tag code.
+     * Gets all marc record field values and possibly additional subfields and corresponding authority values matching a given tag code.
      *
      * @param record a marc record
      * @param tagCodes a list of a mard field codes.
@@ -52,6 +52,7 @@ public class Marc4jUtil {
     public static List<Map<String, String>> getMarcFieldValues(
             Record record,
             List<String> tagCodes,
+            Map<String, String> addSubfields,
             Map<String, String> authority,
             boolean authExclusive) {
 
@@ -82,6 +83,19 @@ public class Marc4jUtil {
                 Subfield subfield = field.getSubfield(tagCode.charAt(3));
                 if (subfield != null) {
                     Map<String, String> valueMap = createMapWithValue(subfield.getData());
+
+                    // Add values of additional subfields
+                    if (addSubfields != null) {
+                        for (String addSubfieldCode : addSubfields.keySet()) {
+                            if (StringUtils.length(addSubfieldCode) < 1) {
+                                continue;
+                            }
+                            Subfield addSubfield = field.getSubfield(addSubfieldCode.charAt(0));
+                            if (addSubfield != null) {
+                                valueMap.put("value", valueMap.get("value") + addSubfields.get(addSubfieldCode) + addSubfield.getData());
+                            }
+                        }
+                    }
 
                     // Check authority subfield
                     if (authority != null) {
@@ -114,4 +128,5 @@ public class Marc4jUtil {
         map.put("value", value);
         return map;
     }
+
 }
