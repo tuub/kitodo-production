@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version112/mets.xsd http://www.loc.gov/mix/v10 http://www.loc.gov/standards/mix/mix10/mix10.xsd">
+    <mets:metsHdr CREATEDATE="2019-04-01T09:51:16">
+        <mets:agent OTHERTYPE="SOFTWARE" ROLE="CREATOR" TYPE="OTHER">
+            <mets:name>Kitodo - kitodo-ugh-2.1.1-kitodo-ugh-2.1.1 - 21−January−2019</mets:name>
+            <mets:note>Kitodo</mets:note>
+        </mets:agent>
+    </mets:metsHdr>
+    <mets:dmdSec ID="DMDLOG_0000">
+        <mets:mdWrap MDTYPE="MODS">
+            <mets:xmlData>
+                <mods:mods xmlns:mods="http://www.loc.gov/mods/v3">
+                    <mods:note type="type">Flugblatt</mods:note>
+                    <mods:note type="funding">Förderprogramm Digitalisierung von Objekten des kulturellen Erbes des Landes Berlin</mods:note>
+                    <mods:identifier type="doi">10.25645/UATUB_717-0001</mods:identifier>
+                    <mods:originInfo>
+                        <mods:place>
+                            <mods:placeTerm type="text">Berlin</mods:placeTerm>
+                        </mods:place>
+                        <mods:dateIssued encoding="w3cdtf" keyDate="yes">1965</mods:dateIssued>
+                        <mods:dateCreated encoding="w3cdtf">1965-06</mods:dateCreated>
+                    </mods:originInfo>
+                    <mods:titleInfo>
+                        <mods:title>Aktion 1. Juli in Berlin</mods:title>
+                    </mods:titleInfo>
+                    <mods:recordInfo>
+                        <mods:recordIdentifier source="kobv">UATUB_717-0001</mods:recordIdentifier>
+                    </mods:recordInfo>
+                    <mods:classification authority="ivdcc">Universitätsarchiv#Flugblattsammlung</mods:classification>
+                    <mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+                    </mods:language>
+                    <mods:accessCondition xmlns:xlink="http://www.w3.org/1999/xlink" type="use and reproduction" href="https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0</mods:accessCondition>
+                    <mods:location>
+                        <mods:physicalLocation>Universitätsarchiv der Technischen Universität Berlin</mods:physicalLocation>
+                        <mods:shelfLocator>717-0001</mods:shelfLocator>
+                    </mods:location>
+                    <mods:physicalDescription>
+                        <mods:form type="size">DIN A4</mods:form>
+                        <mods:digitalOrigin>reformatted digital</mods:digitalOrigin>
+                    </mods:physicalDescription>
+                    <mods:originInfo>
+                        <mods:place>
+                            <mods:placeTerm type="text">Berlin</mods:placeTerm>
+                        </mods:place>
+                        <mods:dateCaptured encoding="w3cdtf">2018</mods:dateCaptured>
+                        <mods:publisher>Universitätsbibliothek der Technischen Universität Berlin</mods:publisher>
+                        <mods:edition>[Electronic ed.]</mods:edition>
+                    </mods:originInfo>
+                    <mods:abstract>Enthält: Aufruf zur Demonstration und Kundgebung am 1. Juli 1965.- Weitere Veranstaltungen an der Freien Universität, der Kirchlichen Hochschule und der Staatlichen Ingenieurschule Gauß am 28. Juni, 30. Juni und 1. Juli 1965.- Sitzung des Berufsschulparlaments am 1. Juli 1965.- Aktion 1. Juli zum Bildungsnotstand. 1 Seite. S/w.</mods:abstract>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:amdSec ID="AMD">
+        <mets:rightsMD ID="RIGHTS">
+            <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS">
+                <mets:xmlData>
+                    <dv:rights xmlns:dv="http://dfg-viewer.de/">
+                        <dv:owner>Universitätsbibliothek der Technischen Universität Berlin</dv:owner>
+                        <dv:ownerLogo>https://digital.ub.tu-berlin.de/fileadmin/presentation/tudfgviewerlogo.jpg</dv:ownerLogo>
+                        <dv:ownerSiteURL>http://www.ub.tu-berlin.de</dv:ownerSiteURL>
+                        <dv:ownerContact>digitalisierung@ub.tu-berlin.de</dv:ownerContact>
+                    </dv:rights>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:rightsMD>
+        <mets:digiprovMD ID="DIGIPROV">
+            <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS">
+                <mets:xmlData>
+                    <dv:links xmlns:dv="http://dfg-viewer.de/">
+                        <dv:reference/>
+                        <dv:presentation>http://kitodo-test.ub.tu-berlin.de/view/work/UATUB_717-0001/</dv:presentation>
+                    </dv:links>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+    </mets:amdSec>
+    <mets:fileSec>
+        <mets:fileGrp USE="THUMBS">
+            <mets:file ID="FILE_0001_THUMBS" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/150/717_0001_0001.jpg"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_THUMBS" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/150/717_0001_0002.jpg"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="MIN">
+            <mets:file ID="FILE_0001_MIN" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/600/717_0001_0001.jpg"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_MIN" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/600/717_0001_0002.jpg"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="FULLTEXT">
+            <mets:file ID="FILE_0001_FULLTEXT" MIMETYPE="application/xml">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/flugblatt_717_0001_xml/717_0001_0001.xml"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_FULLTEXT" MIMETYPE="application/xml">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/flugblatt_717_0001_xml/717_0001_0002.xml"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="DEFAULT">
+            <mets:file ID="FILE_0001_DEFAULT" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/1000/717_0001_0001.jpg"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_DEFAULT" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/1000/717_0001_0002.jpg"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="DOWNLOAD">
+            <mets:file ID="FILE_0001_DOWNLOAD" MIMETYPE="application/pdf">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/pdf/717_0001_0001.pdf"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_DOWNLOAD" MIMETYPE="application/pdf">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/pdf/717_0001_0002.pdf"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="MAX">
+            <mets:file ID="FILE_0001_MAX" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/2000/717_0001_0001.jpg"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_MAX" MIMETYPE="image/jpeg">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/jpeg/2000/717_0001_0002.jpg"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp USE="PRESENTATION">
+            <mets:file ID="FILE_0001_PRESENTATION" MIMETYPE="image/tiff">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/flugblatt_717_0001_tif/717_0001_0001.tif"/>
+            </mets:file>
+            <mets:file ID="FILE_0002_PRESENTATION" MIMETYPE="image/tiff">
+                <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="http://kitodo-test.ub.tu-berlin.de/fileserver/files/UATUB_717-0001/flugblatt_717_0001_tif/717_0001_0002.tif"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap TYPE="LOGICAL">
+        <mets:div ADMID="AMD" CONTENTIDS="https://digital.ub.tu-berlin.de/view/work/UATUB_717-0001/" DMDID="DMDLOG_0000" ID="LOG_0000" LABEL="Aktion 1. Juli in Berlin" TYPE="leaflet"/>
+    </mets:structMap>
+    <mets:structMap TYPE="PHYSICAL">
+        <mets:div ID="PHYS_0000" TYPE="physSequence">
+            <mets:div ID="PHYS_0001" ORDER="1" ORDERLABEL=" - " TYPE="page">
+                <mets:fptr FILEID="FILE_0001_THUMBS"/>
+                <mets:fptr FILEID="FILE_0001_MIN"/>
+                <mets:fptr FILEID="FILE_0001_FULLTEXT"/>
+                <mets:fptr FILEID="FILE_0001_DEFAULT"/>
+                <mets:fptr FILEID="FILE_0001_DOWNLOAD"/>
+                <mets:fptr FILEID="FILE_0001_MAX"/>
+                <mets:fptr FILEID="FILE_0001_PRESENTATION"/>
+            </mets:div>
+            <mets:div ID="PHYS_0002" ORDER="2" ORDERLABEL=" - " TYPE="page">
+                <mets:fptr FILEID="FILE_0002_THUMBS"/>
+                <mets:fptr FILEID="FILE_0002_MIN"/>
+                <mets:fptr FILEID="FILE_0002_FULLTEXT"/>
+                <mets:fptr FILEID="FILE_0002_DEFAULT"/>
+                <mets:fptr FILEID="FILE_0002_DOWNLOAD"/>
+                <mets:fptr FILEID="FILE_0002_MAX"/>
+                <mets:fptr FILEID="FILE_0002_PRESENTATION"/>
+            </mets:div>
+        </mets:div>
+    </mets:structMap>
+    <mets:structLink>
+        <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0001" xlink:from="LOG_0000"/>
+        <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0002" xlink:from="LOG_0000"/>
+    </mets:structLink>
+</mets:mets>

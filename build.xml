@@ -59,6 +59,11 @@
     <property name="build.dist.dir.plugins.import" value="${build.dist.dir}/plugins/import"/>
     <property name="src.dir.plugins.import" value="${src.dir}/plugins/import"/>
 
+    <property name="build.dir.plugins.step" value="${build.dir}/plugins/step"/>
+    <property name="build.dist.dir.plugins.step" value="${build.dist.dir}/plugins/step"/>
+    <property name="src.dir.plugins.step" value="${src.dir}/plugins/step"/>
+    <property name="test.src.dir.plugins.step.archive" value="${src.dir}/plugins/step/ArchivePlugin/src/test"/>
+
     <property name="build.dir.plugins.opac" value="${build.dir}/plugins/opac"/>
     <property name="build.dist.dir.plugins.opac" value="${build.dist.dir}/plugins/opac"/>
     <property name="src.dir.plugins.opac" value="${src.dir}/plugins/opac"/>
@@ -80,6 +85,7 @@
         <path refid="compile.classpath"/>
         <pathelement location="${build.classes}"/>
         <pathelement location="${build.classes.test}"/>
+        <pathelement location="${build.dir.plugins.step}/ArchivePlugin"/>
     </path>
 
     <!--==================================================
@@ -188,6 +194,7 @@
         <mkdir dir="${build.dir.plugins.import}/PicaMassImport"/>
         <mkdir dir="${build.dir.plugins.opac}/PicaPlugin"/>
         <mkdir dir="${build.dir.plugins.opac}/ModsPlugin" />
+        <mkdir dir="${build.dir.plugins.step}/ArchivePlugin"/>
         <mkdir dir="${build.dir}/scripts"/>
         <mkdir dir="${build.dir}/database-setup"/>
     </target>
@@ -313,6 +320,43 @@
         <copy file="${src.dir.plugins.opac}/ModsPlugin/org/kitodo/production/plugin/CataloguePlugin/ModsPlugin/kalliope2kitodo.xsl" todir="${build.classes}" />
     </target>
 
+    <target name="compile-ArchivePlugin" depends="compile">
+        <javac includeAntRuntime="false" srcdir="${src.dir.plugins.step}/ArchivePlugin/src/main/java"
+               destdir="${build.dir.plugins.step}/ArchivePlugin"
+               source="1.8"
+               target="1.8"
+               encoding="UTF8"
+               debug="true"
+               debuglevel="lines,vars,source">
+            <classpath>
+                <pathelement location="${build.classes}"/>
+                <path refid="compile.classpath"/>
+            </classpath>
+            <compilerarg value="${build.javac.args}"/>
+            <exclude name="**/package-info.java"/>
+        </javac>
+    </target>
+
+    <target name="compile-ArchivePlugin-tests" depends="compile-ArchivePlugin, copy-ArchivePlugin-resources">
+        <javac includeAntRuntime="false" srcdir="${test.src.dir.plugins.step.archive}" destdir="${build.classes.test}"
+               source="1.8"
+               target="1.8"
+               encoding="UTF8"
+               debug="true"
+               debuglevel="lines,vars,source"
+               classpathref="test.classpath">
+            <compilerarg value="${build.javac.args}"/>
+        </javac>
+    </target>
+
+    <target name="copy-ArchivePlugin-resources" depends="init">
+        <copy todir="${build.classes.test}">
+            <fileset dir="${test.src.dir.plugins.step.archive}/resources">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+    </target>
+
 
     <!--==================================================
         Distribution
@@ -416,7 +460,8 @@
 
     <!-- Build of plugin jars -->
 
-    <target name="create-plugin-jar-files" depends="create-PicaMassImport-jar, create-PicaPlugin-jar, create-ModsPlugin-jar">
+    <target name="create-plugin-jar-files" depends="create-PicaMassImport-jar, create-PicaPlugin-jar,
+        create-ModsPlugin-jar, create-ArchivePlugin-jar">
     </target>
 
     <target name="create-PicaMassImport-jar" depends="compile-PicaMassImport">
@@ -431,12 +476,16 @@
         <jar level="9" jarfile="${build.dist.dir.plugins.opac}/ModsPlugin.jar" basedir="${build.dir.plugins.opac}/ModsPlugin" />
     </target>
 
+    <target name="create-ArchivePlugin-jar" depends="compile-ArchivePlugin">
+        <jar level="9" jarfile="${build.dist.dir.plugins.step}/ArchivePlugin.jar" basedir="${build.dir.plugins.step}/ArchivePlugin" />
+    </target>
+
     <!--==================================================
         Testing
         ==================================================-->
 
     <!-- JUnit tests -->
-    <target name="junit" depends="compile-tests" description="Run JUnit tests">
+    <target name="junit" depends="compile-tests, compile-ArchivePlugin-tests" description="Run JUnit tests">
         <junit printsummary="on" fork="yes" forkmode="once" haltonerror="true" haltonfailure="true">
             <classpath refid="test.classpath"/>
             <assertions><enable/></assertions>

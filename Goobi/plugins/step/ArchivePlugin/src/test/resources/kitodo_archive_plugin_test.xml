@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<archive-config>
+
+    <!--
+    This is a configuration file template for the archive plugin.
+
+    Attention: You have to escape all commas like this: \,
+    -->
+
+    <!--
+    A submission-manifest.txt with the following informations will be created.
+    -->
+    <manifest>
+        <SubmittingOrganization>TU Berlin</SubmittingOrganization>
+        <OrganizationIdentifier>123</OrganizationIdentifier>
+        <ContractNumber>321</ContractNumber>
+        <Contact>Me\, Myself</Contact>
+        <ContactEmail>me@example.com</ContactEmail>
+        <TransferCurator>You\, Yourself</TransferCurator>
+        <TransferCuratorEmail>you@example.com</TransferCuratorEmail>
+        <AccessRights>rights</AccessRights>
+        <License>license</License>
+        <RightsDescription>rights description</RightsDescription>
+        <MetadataFile>metadata.xml</MetadataFile>
+        <MetadataFileFormat>http://www.loc.gov/standards/mets/version112/mets.xsd</MetadataFileFormat>
+    </manifest>
+
+    <!--
+    Store all export archives in this directory.
+    -->
+    <exportBaseDir>/srv/kitodo/production/archive</exportBaseDir>
+
+    <!--
+    The file group name (@USE) of the master files.
+    -->
+    <masterFileGroup>ORIGINAL</masterFileGroup>
+
+    <!--
+    If this filegroup exists in the project, than the exports
+    having @type="ocr" are required. Otherwise they are optional.
+    -->
+    <fulltextFileGroup>FULLTEXT</fulltextFileGroup>
+
+    <!--
+    <export> defines a set of files to export.
+    @name is the unique name. A directory will be created with this name.
+    @type can be:
+      - "master": the master images files (TIFF files)
+      - "ocr": OCR files
+    <sourceDirPattern> is a Java PathMatcher pattern to search for the source directory
+    <extension> is the file extension for this set of files. The basename will be taken from the master files.
+    -->
+    <export name="master" type="master"/>
+    <export name="ocrAlto" type="ocr">
+        <sourceDirPattern>regex:ocr/\w+_alto$</sourceDirPattern>
+        <extension>xml</extension>
+    </export>
+    <export name="ocrTxt" type="ocr">
+        <sourceDirPattern>regex:ocr/\w+_txt$</sourceDirPattern>
+        <extension>txt</extension>
+    </export>
+
+    <!--
+    Run this command after when archive package was created. Separate program and arguments by commas.
+    e.g scp,-r,{source},server:/path
+    -->
+    <runAfterCreated>scp,-r,{source},server:/path</runAfterCreated>
+
+    <!--
+    Log file path for runAfterCreated commands.
+    -->
+    <runLogFile>/srv/kitodo/production/logs/archive-transfer.log</runLogFile>
+
+</archive-config>
